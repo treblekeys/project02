@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="project2_javascript.js"></script>
+        <link rel="stylesheet" href="project2_css.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>To Do List</title>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1>To-Do List</h1>
+
+            <form id="taskForm" class="mb-3">
+                <div class="mb-3">
+                    <label for="taskName" class="formLabel">Task Name</label>
+                    <input type="text" id="taskName" class="formControl" placeholder="Enter Task" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="taskPriority" class="formLabel">Task Priority</label>
+                    <select id="taskPriority" class="formSelect">
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="taskStatus" class="formLabel">Task Status</label>
+                    <div>
+                        <input type="radio" id="pending" name="taskStatus" value="pending" checked>
+                        <label for="pending">Pending</label>
+                        <input type="radio" id="completed" name="taskStatus" value="completed">
+                        <label for="completed">Completed</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Task</button>
+            </form>
+            <ul id="taskList" class="listGroup"></ul>
+        </div>
+    </body>
+</html>
